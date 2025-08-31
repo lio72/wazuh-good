@@ -27,7 +27,7 @@
 
 - name: Debian/Ubuntu | Add Filebeat-oss repository.
   apt_repository:
-    repo: "{{ wazuh_repo.apt }}"
+    repo: "{{ elasticrepo.apt }}"
     state: present
     update_cache: true
   changed_when: false
