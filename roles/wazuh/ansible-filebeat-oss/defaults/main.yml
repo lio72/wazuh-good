@@ -15,7 +15,7 @@ filebeat_module_folder: /usr/share/filebeat/module/wazuh
 indexer_security_user: admin
 indexer_security_password: changeme
 # Security plugin
-filebeat_security: true
+filebeat_security: false
 filebeat_ssl_dir: /etc/pki/filebeat
 
 # Local path to store the generated certificates (Opensearch security plugin)
