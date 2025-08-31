@@ -1,5 +1,5 @@
 ---
-filebeat_version: 7.10.2
+filebeat_version: 7.17.0
 
 wazuh_template_branch: v4.12.0
 
