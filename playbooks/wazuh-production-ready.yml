@@ -121,9 +121,9 @@
           - username: custom-user
             password: SecretPassword1!
         filebeat_output_indexer_hosts:
-                - "{{ hostvars.wi1.private_ip }}"
-                - "{{ hostvars.wi2.private_ip }}"
-                - "{{ hostvars.wi3.private_ip }}"
+                - "{{ hostvars.wi1.private_ip }}:9200"
+                - "{{ hostvars.wi2.private_ip }}:9200"
+                - "{{ hostvars.wi3.private_ip }}:9200"
 
     - hosts: worker
       roles:
@@ -150,9 +150,9 @@
                   - "{{ hostvars.manager.private_ip }}"
               hidden: 'no'
         filebeat_output_indexer_hosts:
-                - "{{ hostvars.wi1.private_ip }}"
-                - "{{ hostvars.wi2.private_ip }}"
-                - "{{ hostvars.wi3.private_ip }}"
+                - "{{ hostvars.wi1.private_ip }}:9200"
+                - "{{ hostvars.wi2.private_ip }}:9200"
+                - "{{ hostvars.wi3.private_ip }}:9200"
 
 # Wazuh dashboard node
     - hosts: dashboard
