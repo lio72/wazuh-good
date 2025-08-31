@@ -1,0 +1,15 @@
+wi1 ansible_host=54.144.230.234 private_ip=172.31.30.54 indexer_node_name=node-1
+wi2 ansible_host=34.229.178.75 private_ip=172.31.30.91 indexer_node_name=node-2
+wi3 ansible_host=98.81.216.37 private_ip=172.31.25.163 indexer_node_name=node-3
+dashboard  ansible_host=34.224.88.12 private_ip=172.31.19.40
+manager ansible_host=18.234.60.125 private_ip=172.31.23.78
+worker  ansible_host=3.88.139.107 private_ip=172.31.30.88
+[wi_cluster]
+wi1
+wi2
+wi3
+
+[all:vars]
+ansible_ssh_user=ubuntu
+ansible_ssh_private_key_file=/home/ubuntu/.ssh/id_rsa
+ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
