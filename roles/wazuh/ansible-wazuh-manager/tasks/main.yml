@@ -2,18 +2,18 @@
 
 - name: "Install dependencies"
   block:
-    - name: "Install common dependencies"
-      package:
-        name:
-          - unzip
-          - build-essential
-          - openssl
-          - tar
-        state: present
-      register: package_status
-      until: "package_status is not failed"  
-      retries: 10
-      delay: 10
+    # - name: "Install common dependencies"
+    #   package:
+    #     name:
+    #       - unzip
+    #       - build-essential
+    #       - openssl
+    #       - tar
+    #     state: present
+    #   register: package_status
+    #   until: "package_status is not failed"  
+    #   retries: 10
+    #   delay: 10
 
     - name: "Install curl"
       package:
