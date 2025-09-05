@@ -5,7 +5,7 @@
     - name: "Install common dependencies"
       package:
         name:
-          - unzip
+          # - unzip
           - build-essential
           - openssl
           - tar
