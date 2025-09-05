@@ -7,6 +7,7 @@
 
 - name: Install Wazuh indexer dependencies
   apt:
+    update_cache: yes
     name:
       - unzip
       - wget
