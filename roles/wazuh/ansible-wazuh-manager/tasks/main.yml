@@ -6,6 +6,7 @@
       package:
         name:
           - unzip
+          - build-essential
           - openssl
           - tar
         state: present
