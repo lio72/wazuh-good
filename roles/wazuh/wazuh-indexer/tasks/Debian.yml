@@ -4,11 +4,10 @@
 - name: Update cache
   apt:
     update_cache: yes
+    clean: yes
 
 - name: Install Wazuh indexer dependencies
   apt:
-    update_cache: yes
-    clean: yes
     name:
       - unzip
       - wget
