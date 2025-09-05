@@ -6,6 +6,7 @@
     update_cache: yes
 
 - name: Install Wazuh indexer dependencies
+  when: ansible_os_family == "Debian"
   apt:
     update_cache: yes
     name:
@@ -16,7 +17,6 @@
       - software-properties-common
       - gnupg
     state: present
-
 - name: Add Wazuh indexer repository
   block:
     - name: Add apt repository signing key
