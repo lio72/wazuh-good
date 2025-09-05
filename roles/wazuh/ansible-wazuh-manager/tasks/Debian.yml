@@ -4,7 +4,6 @@
     name:
       - apt-transport-https
       - ca-certificates
-      - build-essential
       - gnupg
       - acl
     state: present
