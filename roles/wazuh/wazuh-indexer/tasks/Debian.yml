@@ -6,17 +6,17 @@
     update_cache: yes
     clean: yes
 
-# - name: Install Wazuh indexer dependencies
-#   apt:
-#     name:
-#       - unzip
-#       - wget
-#       - curl
-#       - apt-transport-https
-#       - build-essential
-#       # - software-properties-common
-#       - gnupg
-#     state: present
+- name: Install Wazuh indexer dependencies
+  apt:
+    name:
+      # - unzip
+      - wget
+      - curl
+      - apt-transport-https
+      - build-essential
+      # - software-properties-common
+      - gnupg
+    state: present
 - name: Add Wazuh indexer repository
   block:
     - name: Add apt repository signing key
