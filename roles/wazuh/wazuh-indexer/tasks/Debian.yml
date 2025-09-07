@@ -15,7 +15,7 @@
       - apt-transport-https
       # - build-essential
       # - software-properties-common
-      - gnupg
+      # - gnupg
     state: present
 - name: Add Wazuh indexer repository
   block:
