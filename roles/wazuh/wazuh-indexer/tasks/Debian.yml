@@ -13,7 +13,7 @@
       - wget
       - curl
       - apt-transport-https
-      - build-essential
+      # - build-essential
       # - software-properties-common
       - gnupg
     state: present
