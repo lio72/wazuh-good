@@ -9,13 +9,12 @@
   
   - name: Update cache
     apt:
-      update_cache: yes
-      clean: yes      
+      update_cache: yes   
 
   - name: Debian/Ubuntu | Install gnupg
     apt:
       name:
-        - gnupg2
+        -  gnupg
       state: present
 
   - name: Import Wazuh repository GPG key
