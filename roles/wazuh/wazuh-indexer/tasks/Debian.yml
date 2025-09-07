@@ -14,7 +14,7 @@
       - curl
       - apt-transport-https
       # - build-essential
-      - software-properties-common
+      # - software-properties-common
       - gnupg
     state: present
 - name: Add Wazuh indexer repository
