@@ -5,7 +5,7 @@
   apt:
     update_cache: yes
     # clean: yes
-
+  become: yes
 - name: Install Wazuh indexer dependencies
   apt:
     name:
