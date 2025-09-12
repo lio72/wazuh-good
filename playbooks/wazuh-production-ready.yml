@@ -89,9 +89,14 @@
             node_type: master
           node5:
             name: node-5
-            ip: "{{ hostvars.worker.private_ip }}"
+            ip: "{{ hostvars.worker1.private_ip }}"
             role: wazuh
             node_type: worker
+          node7:
+            name: node-7
+            ip: "{{ hostvars.worker2.private_ip }}"
+            role: wazuh
+            node_type: worker               
           node6:
             name: node-6
             ip: "{{ hostvars.dashboard.private_ip }}"
