@@ -91,12 +91,12 @@
             name: node-5
             ip: "{{ hostvars.worker1.private_ip }}"
             role: wazuh
-            node_type: worker1
-          node7:
-            name: node-7
-            ip: "{{ hostvars.worker2.private_ip }}"
-            role: wazuh
-            node_type: worker2              
+            node_type: worker
+          # node7:
+          #   name: node-7
+          #   ip: "{{ hostvars.worker2.private_ip }}"
+          #   role: wazuh
+          #   node_type: worker2              
           node6:
             name: node-6
             ip: "{{ hostvars.dashboard.private_ip }}"
@@ -135,7 +135,7 @@
                 - "{{ hostvars.wi2.private_ip }}:9200"
                 - "{{ hostvars.wi3.private_ip }}:9200"
 
-    - hosts: worker1
+    - hosts: worker
       roles:
         - role: "../roles/wazuh/ansible-wazuh-manager"
         - role: "../roles/wazuh/ansible-filebeat-oss"
@@ -153,7 +153,7 @@
               https: 'yes'
           cluster:
               disable: 'no'
-              node_name: 'worker_01'
+              node_name: 'worker'
               node_type: 'worker'
               key: 'c98b62a9b6169ac5f67dae55ae4a9088'
               nodes:
@@ -164,34 +164,34 @@
                 - "{{ hostvars.wi2.private_ip }}:9200"
                 - "{{ hostvars.wi3.private_ip }}:9200"
 
-    - hosts: worker2
-      roles:
-        - role: "../roles/wazuh/ansible-wazuh-manager"
-        - role: "../roles/wazuh/ansible-filebeat-oss"
-          filebeat_node_name: node-7
-      become: yes
-      become_user: root
-      vars:
-        wazuh_manager_config:
-          connection:
-              - type: 'secure'
-                port: '1514'
-                protocol: 'tcp'
-                queue_size: 131072
-          api:
-              https: 'yes'
-          cluster:
-              disable: 'no'
-              node_name: 'worker_02'
-              node_type: 'worker'
-              key: 'c98b62a9b6169ac5f67dae55ae4a9088'
-              nodes:
-                  - "{{ hostvars.manager.private_ip }}"
-              hidden: 'no'
-        filebeat_output_indexer_hosts:
-                - "{{ hostvars.wi1.private_ip }}:9200"
-                - "{{ hostvars.wi2.private_ip }}:9200"
-                - "{{ hostvars.wi3.private_ip }}:9200"
+    # - hosts: worker2
+    #   roles:
+    #     - role: "../roles/wazuh/ansible-wazuh-manager"
+    #     - role: "../roles/wazuh/ansible-filebeat-oss"
+    #       filebeat_node_name: node-7
+    #   become: yes
+    #   become_user: root
+    #   vars:
+    #     wazuh_manager_config:
+    #       connection:
+    #           - type: 'secure'
+    #             port: '1514'
+    #             protocol: 'tcp'
+    #             queue_size: 131072
+    #       api:
+    #           https: 'yes'
+    #       cluster:
+    #           disable: 'no'
+    #           node_name: 'worker_02'
+    #           node_type: 'worker'
+    #           key: 'c98b62a9b6169ac5f67dae55ae4a9088'
+    #           nodes:
+    #               - "{{ hostvars.manager.private_ip }}"
+    #           hidden: 'no'
+    #     filebeat_output_indexer_hosts:
+    #             - "{{ hostvars.wi1.private_ip }}:9200"
+    #             - "{{ hostvars.wi2.private_ip }}:9200"
+    #             - "{{ hostvars.wi3.private_ip }}:9200"
 
 
 # Wazuh dashboard node
