@@ -486,3 +486,11 @@ Copyright (C) 2016, Wazuh Inc.  (License GPLv2)
 ## Web references
 
 - [Wazuh website](http://wazuh.com)
+
+nb: create ssh key
+
+copy ssh private key in  /.ssh/ 
+and give 655 rigth
+
+install with ansible, and check if ssh connexion is ok with all host
+
