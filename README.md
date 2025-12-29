@@ -494,3 +494,7 @@ and give 655 rigth
 
 install with ansible, and check if ssh connexion is ok with all host
 
+
+
+## fix all when issue 
+adding  "| length > 0 " in when instruction that fail
