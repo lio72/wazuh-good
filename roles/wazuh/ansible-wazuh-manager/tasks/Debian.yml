@@ -1,4 +1,9 @@
 ---
+- name: Update cache
+  apt:
+    update_cache: yes
+    # clean: yes
+  become: yes
 - name: Debian/Ubuntu | Install apt-transport-https, ca-certificates and acl
   apt:
     name:
