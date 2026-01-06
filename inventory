@@ -1,9 +1,9 @@
-wi1 ansible_host=10.0.1.239 private_ip=10.0.1.239 indexer_node_name=node-1
-wi2 ansible_host=10.0.2.16 private_ip=10.0.2.16 indexer_node_name=node-2
-wi3 ansible_host=10.0.6.12 private_ip=10.0.6.12 indexer_node_name=node-3
-dashboard  ansible_host=10.0.5.253 private_ip=10.0.5.253
-manager ansible_host=10.0.1.227 private_ip=10.0.1.227
-worker  ansible_host=10.0.2.134 private_ip=10.0.2.134
+wi1 ansible_host=10.0.1.234 private_ip=10.0.1.234 indexer_node_name=node-1
+wi2 ansible_host=10.0.2.33 private_ip=10.0.2.33 indexer_node_name=node-2
+wi3 ansible_host=10.0.6.10 private_ip=10.0.6.10 indexer_node_name=node-3
+dashboard  ansible_host=10.0.5.63 private_ip=10.0.5.63
+manager ansible_host=10.0.1.140 private_ip=10.0.1.140
+worker  ansible_host=10.0.2.79 private_ip=10.0.2.79
 [wi_cluster]
 wi1
 wi2
